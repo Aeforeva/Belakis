@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/svg" href="demon.svg">
+    <title>Lost Ark Belakis</title>
+  </head>
+  <!-- <body onload="start()"> -->
+  <body>
+    <div id="gameField">
+      <img src="./belakis.jpg" alt="boss image" />
+      <div class="text">
+        <sapn>Lost Ark Белакис кнопочки</sapn>
+        <span style="margin-right: 1rem">
+          <span id="winCount" style="color: limegreen">Win: 0</span>
+          <span id="lossCount" style="color: tomato">Loss: 0</span>
+        </span>
+      </div>
+      <div id="wasd">
+        <!-- Placeholder -->
+        <span class="key">S</span>
+        <span class="key">P</span>
+        <span class="key">A</span>
+        <span class="key">C</span>
+        <span class="key">E</span>
+        <span class="key">B</span>
+        <span class="key">A</span>
+        <span class="key">R</span>
+      </div>
+      <div id="timeBarParent">
+        <div class="timeBar"></div>
+      </div>
+      <div class="text">
+        <span>Нажмите ПРОБЕЛ чтобы начать или перезапустить</span>
+        <span>
+          <label for="timer">Timer:</label>
+          <input
+            id="timer"
+            type="number"
+            value="3.3"
+            min="1"
+            max="5"
+            step="0.1"
+            onchange="setTimer(value)"
+          />
+        </span>
+      </div>
+      <div style="color: lightgray">© Aeforeva Кратос</div>
+    </div>
+  </body>
+</html>
+<script src="./js/keysbind.js"></script>
+<script src="./js/setkeys.js"></script>
+<script src="./js/timer.js"></script>
+<script src="/js/app.js"></script>
