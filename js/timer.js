@@ -5,10 +5,10 @@ let timeOut;
 
 function setTimer(params) {
   timer = params;
-  console.log("The timer is set to " + timer);
+  console.log("The timer is set to " + timer + " sec");
 }
 
-function timerEnd(params) {
+function setTimerTimeout(params) {
   timeOut = setTimeout(loss, params * 1000);
 }
 
@@ -20,5 +20,4 @@ function animationStart(params) {
 
 function animationStop() {
   timeBar.style.animationPlayState = "paused";
-  clearTimeout(timeOut);
 }

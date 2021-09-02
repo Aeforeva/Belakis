@@ -13,9 +13,9 @@ function start() {
   currentCheck = 0;
   wasd.innerHTML = "";
   createRandomKeys();
-  setKeysField();
+  renderRandomKeys();
   animationStart(timer);
-  timerEnd(timer);
+  setTimerTimeout(timer);
   isRunning = true;
 }
 
@@ -24,6 +24,7 @@ function win() {
   winCount++;
   winHtml.innerHTML = `Win: ${winCount}`;
   animationStop();
+  clearTimeout(timeOut);
 }
 
 function loss() {
@@ -32,6 +33,7 @@ function loss() {
   lossHtml.innerHTML = `Loss: ${lossCount}`;
   document.querySelector(`#key${currentCheck}`).classList.add("false");
   animationStop();
+  clearTimeout(timeOut);
 }
 
 function check(params) {
