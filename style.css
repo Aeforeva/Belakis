@@ -2,11 +2,6 @@
   background-color: #292152;
 }
 
-input {
-  color: white;
-  border: none;
-}
-
 img {
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
   margin-bottom: 0.4em;
@@ -17,6 +12,17 @@ img {
     /* More performant than animating `width` */
     transform: scaleX(0);
   }
+}
+
+#gameField {
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+}
+
+#randomType {
+  color: white;
 }
 
 .text {
@@ -35,11 +41,12 @@ img {
   /* animation: roundtime ${timer}s linear forwards; */
 }
 
-#gameField {
-  position: fixed; /* or absolute */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -65%);
+#timer {
+  color: white;
+  border: none;
+  text-align: center;
+  font-size: 1rem;
+  width: 60px;
 }
 
 #wasd {

@@ -13,6 +13,7 @@
   <body>
     <div id="gameField">
       <img src="./belakis.jpg" alt="boss image" />
+
       <div class="text">
         <sapn>Lost Ark Белакис кнопочки</sapn>
         <span style="margin-right: 1rem">
@@ -20,6 +21,7 @@
           <span id="lossCount" style="color: tomato">Loss: 0</span>
         </span>
       </div>
+
       <div id="wasd">
         <!-- Placeholder -->
         <span class="key">S</span>
@@ -31,9 +33,11 @@
         <span class="key">A</span>
         <span class="key">R</span>
       </div>
+
       <div id="timeBarParent">
         <div class="timeBar"></div>
       </div>
+
       <div class="text">
         <span>Нажмите ПРОБЕЛ чтобы начать или перезапустить</span>
         <span>
@@ -49,7 +53,20 @@
           />
         </span>
       </div>
-      <div style="color: lightgray">© Aeforeva Кратос</div>
+
+      <div class="text">
+        <span style="color: lightgray">© Aeforeva Кратос</span>
+        <span>
+          <label for="randomType">Random Type:</label>
+          <select id="randomType" onchange="setRandomType(value)">
+            <option value="3" title="не более 2х одинаковых подряд">
+              2 Row
+            </option>
+            <option value="2" title="не более 2х одинаковых">2 Max</option>
+            <option value="1" title="полностью случайное (легче)">Full</option>
+          </select>
+        </span>
+      </div>
     </div>
   </body>
 </html>
